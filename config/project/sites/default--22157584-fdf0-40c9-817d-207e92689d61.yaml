@@ -1,0 +1,8 @@
+baseUrl: $PRIMARY_SITE_URL
+handle: default
+hasUrls: true
+language: en-US
+name: craft-news-a
+primary: true
+siteGroup: 20ed0978-d429-469b-8568-7ea52c32c967 # craft-news-a
+sortOrder: 1

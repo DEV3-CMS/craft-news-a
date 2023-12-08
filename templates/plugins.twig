@@ -1,0 +1,18 @@
+{% extends "_layout.twig" %}
+
+{% block content %}
+  <section class="news-section all-news">
+   {% set entries = craft.entries().section('pluginReviews').all() %}
+
+    {% for entry in entries %}
+    <article>
+        <img src="{{entry.bannerImage.one().url('banner')}}" alt="">
+        <div>
+          <h2><a href="{{entry.storeUrl}}">{{entry.title}}</a></h2>
+          <p>{{entry.introText}}<p>
+          <p>Review: <strong>{{entry.rating}} / 5</strong></p>
+        </div>
+    </article>
+    {% endfor %}
+  </section>
+{% endblock %}

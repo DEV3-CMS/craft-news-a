@@ -1,0 +1,19 @@
+columnSuffix: gninfktw
+contentColumnType: text
+fieldGroup: 784b6530-b0a2-46f1-a5cc-008816f6ad32 # Common
+handle: fullText
+instructions: null
+name: 'full text'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

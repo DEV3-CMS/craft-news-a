@@ -1,0 +1,70 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 784b6530-b0a2-46f1-a5cc-008816f6ad32 # Common
+handle: bannerImage
+instructions: null
+name: 'banner image'
+searchable: false
+settings:
+  allowSelfRelations: false
+  allowSubfolders: false
+  allowUploads: true
+  allowedKinds: null
+  branchLimit: null
+  defaultUploadLocationSource: 'volume:027709b3-b422-4204-9597-c132f25a8567' # news-assets
+  defaultUploadLocationSubpath: null
+  localizeRelations: false
+  maintainHierarchy: false
+  maxRelations: null
+  minRelations: null
+  previewMode: thumbs
+  restrictFiles: false
+  restrictLocation: false
+  restrictedDefaultUploadSubpath: null
+  restrictedLocationSource: 'volume:027709b3-b422-4204-9597-c132f25a8567' # news-assets
+  restrictedLocationSubpath: null
+  selectionCondition:
+    __assoc__:
+      -
+        - elementType
+        - craft\elements\Asset
+      -
+        - fieldContext
+        - global
+      -
+        - class
+        - craft\elements\conditions\assets\AssetCondition
+      -
+        - conditionRules
+        -
+          -
+            __assoc__:
+              -
+                - class
+                - craft\elements\conditions\assets\FileSizeConditionRule
+              -
+                - uid
+                - f1b32762-b378-467f-b542-f6bf9fffc145
+              -
+                - operator
+                - '<'
+              -
+                - value
+                - '100'
+              -
+                - maxValue
+                - ''
+              -
+                - unit
+                - MB
+  selectionLabel: null
+  showSiteMenu: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  sources: '*'
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: large
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Assets

@@ -1,0 +1,12 @@
+defaultPlacement: end
+enableVersioning: true
+handle: footer
+name: footer
+propagationMethod: all
+siteSettings:
+  22157584-fdf0-40c9-817d-207e92689d61: # craft-news-a
+    enabledByDefault: true
+    hasUrls: true
+    template: footer/_entry
+    uriFormat: footer
+type: single

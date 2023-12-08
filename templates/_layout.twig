@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="{{craft.app.language}}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{siteName}}</title>
+    {% do craft.app.view.registerCssFile('@web/styles/normalize.css') %}
+    {% do craft.app.view.registerCssFile('@web/styles/style.css') %}
+</head>
+<body>
+    <header>
+      {% set headerTitle = craft.entries().section('headerTitle').one() %}
+      {{headerTitle.richText}}
+      <nav>
+        <input type="checkbox" name="menu-toggle" id="menu-toggle"/>
+        <span></span>
+        <span></span>
+        <span></span>
+        <ul id="nav-menu">
+          <li><a href="{{siteUrl}}">Home</a></li>
+          <li><a href="{{siteUrl}}news">News</a></li>
+          <li><a href="#">Tutorials</a></li>
+          <li><a href="{{siteUrl}}plugins">Plugins</a></li>
+          <li><a href="{{siteUrl}}about-us">About Us</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    {% block content %}
+    {# hier komt de content #}
+    {% endblock %}
+
+    <footer>
+      {% set footer = craft.entries().section('footer').one() %}
+      {{footer.richText}}
+    </footer>
+
+</body>
+</html>

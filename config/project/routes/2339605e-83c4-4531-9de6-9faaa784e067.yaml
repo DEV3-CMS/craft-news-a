@@ -1,0 +1,6 @@
+siteUid: null
+sortOrder: 1
+template: news/_allnews
+uriParts:
+  - news
+uriPattern: news

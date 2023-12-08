@@ -1,0 +1,9 @@
+{% extends "_layout.twig" %}
+
+{% block content %}
+    <section class="article-details">
+        <img src="{{entry.bannerImage.one().url('header')}}" alt="">
+        <h2>{{entry.title}}</h2>
+        <p>{{entry.fullText}}</p>
+    </section>
+{% endblock %}

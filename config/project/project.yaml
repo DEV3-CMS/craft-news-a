@@ -1,0 +1,55 @@
+dateModified: 1701708515
+email:
+  fromEmail: stijnvanpeborgh@gmail.com
+  fromName: craft-news-a
+  transportType: craft\mail\transportadapters\Sendmail
+fs:
+  assets:
+    hasUrls: true
+    name: assets
+    settings:
+      path: '@webroot/assets'
+    type: craft\fs\Local
+    url: '@web/assets'
+meta:
+  __names__:
+    2a4f59e5-acf8-4fc7-806a-462bb7563eac: 'About Us' # About Us
+    2b10cb7c-e848-483c-ae2d-fd185096e8df: 'plugin reviews' # plugin reviews
+    3d20e2e1-db9a-4c48-87ea-da43f742096b: Default # Default
+    6a9b7673-68f9-4fb7-b69b-c64cf1831e25: news # news
+    6a3950ce-58b7-4be3-8c15-42f377f723bf: 'intro text' # intro text
+    20ed0978-d429-469b-8568-7ea52c32c967: craft-news-a # craft-news-a
+    41ef28ee-33e4-4efc-812e-0bc56289e5f5: 'About Us' # About Us
+    82e46b3b-d595-48b8-8cb7-e5155bd16e7b: 'store url' # store url
+    714c9b9d-857c-412e-b00e-8d001081adb3: 'full text' # full text
+    784b6530-b0a2-46f1-a5cc-008816f6ad32: Common # Common
+    2365e01a-20c7-42cd-866f-4e4a79bca25d: 'rich text' # rich text
+    027709b3-b422-4204-9597-c132f25a8567: news-assets # news-assets
+    5261768b-6f80-4a42-b41c-da70d1de28d6: footer # footer
+    12332128-52a9-4990-b53f-ad5bdd81cd4c: 'header title' # header title
+    22157584-fdf0-40c9-817d-207e92689d61: craft-news-a # craft-news-a
+    a88d603b-3570-44bf-b52a-1eda34742597: Rating # Rating
+    b302b1e4-a681-487f-9c76-6de79e7ee387: banner # banner
+    c7901917-c90e-418e-83ff-0cfbab9fdac0: Default # Default
+    cbf49ce7-fba8-499b-a0fc-6e39468730c6: 'header title' # header title
+    ce59be17-e13d-420b-99b1-1268579e502d: 'banner image' # banner image
+    de1a10d2-7a7a-4daa-af1b-745162e5b7f3: header # header
+    e4b12178-c53b-4272-ac65-501a0d084bcd: footer # footer
+    fb167894-a519-40be-8e01-d55377228e28: thumbnail # thumbnail
+plugins:
+  abm-tinymce:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+system:
+  edition: solo
+  live: true
+  name: craft-news-a
+  schemaVersion: 4.5.3.0
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true

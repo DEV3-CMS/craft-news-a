@@ -1,0 +1,18 @@
+{% extends "_layout.twig" %}
+
+{% block content %}
+  <section class="news-section all-news">
+   {% set entries = craft.entries().section('news').all() %}
+
+    {% for entry in entries %}
+    <article>
+        <img src="{{entry.bannerImage.one().url('banner')}}" alt="">
+        <div>
+          <h2><a href="{{entry.url}}">{{entry.title}}</a></h2>
+          <p>{{entry.introText}}<p>
+          <a href="{{entry.url}}">read more</a>
+        </div>
+    </article>
+    {% endfor %}
+  </section>
+{% endblock %}
