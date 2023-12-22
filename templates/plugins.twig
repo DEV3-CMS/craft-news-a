@@ -1,18 +1,71 @@
 {% extends "_layout.twig" %}
 
 {% block content %}
+  {% set categories = craft.entries().section('storeCategories').all() %}
+  <div class="plugin-categories">
+    {% for cat in categories %}
+      <label><input type="checkbox" name="{{cat}}"/>{{cat}}</label>
+    {% endfor %}
+  </div>
   <section class="news-section all-news">
    {% set entries = craft.entries().section('pluginReviews').all() %}
 
     {% for entry in entries %}
-    <article>
+    <article
+      {% for category in entry.storeCategories %}
+       data-{{category}}
+      {% endfor %}
+    >
         <img src="{{entry.bannerImage.one().url('banner')}}" alt="">
         <div>
           <h2><a href="{{entry.storeUrl}}">{{entry.title}}</a></h2>
           <p>{{entry.introText}}<p>
+          <div class="categories">
+            {% for category in entry.storeCategories %}
+              <span>{{category}}</span>
+            {% endfor %}
+          </div>
           <p>Review: <strong>{{entry.rating}} / 5</strong></p>
         </div>
     </article>
     {% endfor %}
   </section>
+  <script>
+    let selectedCategories = [];
+
+    document.querySelectorAll(".plugin-categories input").forEach((element) => {
+      element.addEventListener("change", onSelectCategory);
+    });
+
+
+    function onSelectCategory(e) {
+      console.log("change");
+      if (selectedCategories.includes(this.name)) {
+        let index = selectedCategories.indexOf(this.name);
+        selectedCategories.splice(index, 1);
+      }
+      else {
+        selectedCategories.push(this.name);
+      }
+      console.log(selectedCategories);
+      updateGrid();
+    }
+
+    function updateGrid() {
+      console.log("updateGrid");
+      document.querySelectorAll(".news-section article").forEach((el) => {
+        el.style.display = "none";
+        // console.log(selectedCategories);
+        for (let i = 0; i < selectedCategories.length; i++) {
+          // console.log(el.hasAttribute("data-" + selectedCategories[i]));
+          if (el.hasAttribute("data-" + selectedCategories[i])) {
+            el.style.display = "block";
+          }
+        }
+        if (selectedCategories.length == 0) {
+          el.style.display = "block";
+        }
+      });
+    }
+  </script>
 {% endblock %}

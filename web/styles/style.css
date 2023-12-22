@@ -118,6 +118,20 @@ h2,
   margin: auto;
 }
 
+.news-section article .categories {
+  padding: 0.5rem 0;
+}
+
+.news-section article .categories span {
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  padding: 0.25rem;
+  border-radius: 5px;
+  border: 1px solid #F6F4F4;
+
+}
+
 .article-details {
   max-width: 800px;
   background-color: #fff;
@@ -138,6 +152,37 @@ h2,
 .article-details h2 {
   margin-left: 2rem;
 }
+
+.plugin-categories {
+  padding: 1rem 0 0 0;
+  display: flex;
+  max-width: 1000px;
+  text-decoration: none;
+  justify-content: space-evenly;
+  margin-left: auto;
+  margin-right: auto;
+  flex: 0 0 100%;
+  flex-wrap: wrap;
+}
+
+
+.plugin-categories input {
+  display: none;
+}
+
+.plugin-categories label {
+  border: 1px solid #D24335;
+  border-radius: 20px;
+  padding: 10px;
+  margin-top: 0.5rem;
+}
+
+.plugin-categories label:has(input:checked) {
+
+  color: #fff;
+  background-color: #D24335;
+}
+
 
 footer {
   background-color: #2b2b2b;
@@ -229,19 +274,12 @@ footer {
     transform-origin: 0% 100%;
   }
 
-  /* 
- * Transform all the slices of hamburger
- * into a crossmark.
- */
   nav #menu-toggle:checked~span {
     opacity: 1;
     transform: rotate(45deg) translate(-2px, -1px);
     background: #232323;
   }
 
-  /*
- * But let's hide the middle one.
- */
   nav #menu-toggle:checked~span:nth-last-child(3) {
     opacity: 0;
     transform: rotate(0deg) scale(0.2, 0.2);
